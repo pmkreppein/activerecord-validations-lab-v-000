@@ -14,5 +14,8 @@ class Post < ActiveRecord::
     /Guess/i
   ]
   
-  
+   def is_clickbait?
+    if CLICKBAIT.none? { |pat| pat.match title }
+      errors.add(:title, "must be clickbait")
+    end
 end
