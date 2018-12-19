@@ -7,5 +7,12 @@ class Post < ActiveRecord::
     
   }
   
+    CLICKBAIT = [
+    /Won't Believe/i,
+    /Secret/i,
+    /Top [0-9]*/i,
+    /Guess/i
+  ]
+  
   
 end
